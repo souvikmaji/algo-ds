@@ -7,7 +7,6 @@ class Solution {
         for(int i = 0 ; i < row; i ++){
             for(int j = 0 ; j < col; j ++){
                 if(grid[i][j] == '1'){
-                    // System.out.println(i + " " + j);
                     count ++;
                     
                     Queue<Coordinate> q = new ArrayDeque<>();    
@@ -15,7 +14,6 @@ class Solution {
                     
                     while(!q.isEmpty()){
                         Coordinate c =  q.remove();
-                        grid[c.i][c.j] = '0';
                         
                         for(int[] d: directions){
                             int nextI = c.i + d[0];
